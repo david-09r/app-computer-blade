@@ -42,7 +42,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function computer(): HasMany
+    public function computer(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Computer::class);
     }

@@ -15,9 +15,9 @@ class CreateComputersTable extends Migration
     {
         Schema::create('computers', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('date_purchase');
-            $table->dateTime('date_delivery');
-            $table->dateTime('date_assembly');
+            $table->dateTime('date_purchase')->nullable();
+            $table->dateTime('date_delivery')->nullable();
+            $table->dateTime('date_assembly')->nullable();
             $table->timestamps();
 
             $table->unsignedBigInteger('assembler_id');

@@ -9,7 +9,17 @@ class Assembler extends Model
 {
     use HasFactory;
 
-    public function computer(): HasMany
+    protected $fillable = [
+        'first_name',
+        'last_name',
+        'phone_number',
+        'payment_method',
+        'email',
+        'password',
+        'position'
+    ];
+
+    public function computer(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Computer::class);
     }

@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('computers', \App\Http\Controllers\ComputerController::class);
+
+Route::resource('assemblers', \App\Http\Controllers\AssemblersController::class);
+
+Route::resource('sellers', \App\Http\Controllers\SellerController::class);

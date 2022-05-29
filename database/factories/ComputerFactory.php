@@ -17,9 +17,9 @@ class ComputerFactory extends Factory
     public function definition()
     {
         return [
-            'date_purchase' => $this->faker->dateTime()->format('d-m-Y H:i:s'),
-            'date_delivery' => $this->faker->dateTime()->format('d-m-Y H:i:s'),
-            'date_assembly' => $this->faker->dateTime()->format('d-m-Y H:i:s'),
+            'date_purchase' => $this->faker->dateTime(),
+            'date_delivery' => $this->faker->dateTime(),
+            'date_assembly' => $this->faker->dateTime(),
 
             'assembler_id' => Assembler::factory(),
             'seller_id' => Seller::factory(),

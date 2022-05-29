@@ -9,7 +9,7 @@ class Seller extends Model
 {
     use HasFactory;
 
-    public function computer(): HasMany
+    public function computer(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Computer::class);
     }
